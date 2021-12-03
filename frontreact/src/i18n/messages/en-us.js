@@ -6,6 +6,7 @@ const english = {
     home: "Home",
     gallery: "Gallery",
     units_in_stock: "Units in stock",
+    empty_message: "No products were found with the name ",
   },
 };
 

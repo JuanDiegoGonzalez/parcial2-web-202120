@@ -6,6 +6,7 @@ const spanish = {
     home: "Inicio",
     gallery: "Galería",
     units_in_stock: "Unidades en inventario",
+    empty_message: "No se encontraron productos con el nombre ",
   },
 };
 

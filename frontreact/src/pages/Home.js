@@ -31,6 +31,13 @@ export const Home = ({ searchKey }) => {
                 isActive={elem.isActive}
               />
             ))}
+          {products?.length > 0 ? (
+            <p></p>
+          ) : (
+            <p>
+              <FormattedMessage id="empty_message" />"{searchKey}"
+            </p>
+          )}
         </div>
       </div>
     </section>

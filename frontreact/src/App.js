@@ -28,11 +28,7 @@ function App() {
             path="/"
             element={<Home searchKey={searchState.searchKey} />}
           />
-          <Route
-            exact
-            path="/report"
-            element={<Report searchKey={searchState.searchKey} />}
-          />
+          <Route exact path="/report" element={<Report />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </main>
