@@ -6,12 +6,12 @@ export const Home = ({ searchKey }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(url)
+    fetch(url + "?q=" + searchKey)
       .then((resp) => resp.json())
       .then((data) => {
         setProducts(data);
       });
-  }, []);
+  }, [searchKey]);
 
   return (
     <section id="home">
@@ -21,7 +21,7 @@ export const Home = ({ searchKey }) => {
           {products &&
             products.map((elem) => (
               <Card
-                key={elem.id}
+                key={elem._id}
                 name={elem.name}
                 picture={elem.picture}
                 price={elem.price}
