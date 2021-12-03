@@ -1,7 +1,7 @@
-const data = require('../assets/data');
+const data = require("../assets/data");
 
 function getProducts(query) {
-  return data;
+  return data.filter((item) => item.name.toLowerCase().includes(query));
 }
 
 module.exports = { getProducts };
