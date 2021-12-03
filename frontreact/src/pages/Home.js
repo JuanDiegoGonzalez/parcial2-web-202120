@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "../components/Card";
+import { FormattedMessage } from "react-intl";
 
 export const Home = ({ searchKey }) => {
   const url = "http://localhost:3001/api/products";
@@ -16,7 +17,9 @@ export const Home = ({ searchKey }) => {
   return (
     <section id="home">
       <div className="home-container">
-        <h1>Gallery</h1>
+        <h1>
+          <FormattedMessage id="gallery" />
+        </h1>
         <div className="home-card">
           {products &&
             products.map((elem) => (

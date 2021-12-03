@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { FormattedMessage } from "react-intl";
 
 export const Report = () => {
   const [products, setProducts] = useState([]);
 
   return (
-    <section id='report'>
-      <div className='report-container'>
-        <h1>Unidades en inventario</h1>
+    <section id="report">
+      <div className="report-container">
+        <h1>
+          <FormattedMessage id="units_in_stock" />
+        </h1>
         <p>Show here the graph</p>
       </div>
     </section>
