@@ -17,7 +17,8 @@ export const Chart = ({ width = 600, height = 600, data }) => {
       .select("#chartArea")
       .append("div")
       .style("visibility", "visible")
-      .style("position", "absolute");
+      .style("position", "absolute")
+      .style("background-color", "white");
 
     let g = svg
       .append("g")
@@ -43,7 +44,7 @@ export const Chart = ({ width = 600, height = 600, data }) => {
       .attr("height", (d) => iheight - y(d.stock))
       .attr("width", x.bandwidth())
       .on("mouseover", (e, d) => {
-        tooltip.style("visibility", "visible").text(`${d.name}`);
+        tooltip.style("visibility", "visible").text(`${d.name}: ${d.stock}`);
       })
       .on("mousemove", (e, d) => {
         tooltip
